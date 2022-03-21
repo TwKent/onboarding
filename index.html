@@ -32,7 +32,9 @@ Email: <input name="email" required="" size="60" type="email"/>
 </script>
 <script type="text/javascript"> 
   function identify(e){ 
-    e.preventDefault(); 
+    document.write("identify");
+    e.preventDefault();
+    document.write("prevented");
     var form = e.target; 
     var email = form["email"].value; 
     var fullname = form["fullname"].value; 
