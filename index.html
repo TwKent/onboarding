@@ -32,9 +32,9 @@ Email: <input name="email" required="" size="60" type="email"/>
 </script>
 <script type="text/javascript"> 
   function identify(e){ 
-    document.write("identify");
+    console.log("identify");
     e.preventDefault();
-    document.write("prevented");
+    console.log("prevented");
     var form = e.target; 
     var email = form["email"].value; 
     var fullname = form["fullname"].value; 
@@ -44,14 +44,14 @@ Email: <input name="email" required="" size="60" type="email"/>
       name: fullname
     }; 
  // Identify call
-     document.write("about to ident");
+     console.log("about to ident");
      analytics.identify('12345', { 
        email: email, 
        name: fullname,
        shoeType: shoeType 
      }); 
   //  Sign-up Track call
-     document.write("about to track");
+     console.log("about to track");
      analytics.track('user signed up', user, function() { 
        window.location.href = ""; 
      });
